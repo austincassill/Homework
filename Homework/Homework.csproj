@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ByTens.cs" />
+    <Compile Include="EvenNumbers.cs" />
     <Compile Include="Fibonacci.cs" />
     <Compile Include="FibonacciBase.cs" />
     <Compile Include="fibonacciIndex.cs" />

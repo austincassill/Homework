@@ -9,7 +9,7 @@ namespace Homework
 {
     public class Fibonacci
     {
-        private Retrieve(fibonacciIndex);
+   
         // this method takes an index as a parameter and returns the fibonacci number at that index.
         public long Retrieve(int fibonacciIndex)
         {
