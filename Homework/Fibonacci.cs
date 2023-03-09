@@ -9,17 +9,57 @@ namespace Homework
 {
     public class Fibonacci
     {
-   
+        private List<long> FibonacciSequence = new List<long>()
+            {
+                0, 1
+            };
         // this method takes an index as a parameter and returns the fibonacci number at that index.
-        public long Retrieve(int fibonacciIndex)
+        public long RetrieveFibonacciNumberAtIndex(int fibonacciIndex)
         {
-            if (fibonacciIndex <= 1)
+
+
+            if (fibonacciIndex <= 2)
             {
-                return fibonacciIndex;
+                return FibonacciSequence[fibonacciIndex - 1];
             }
-            else
+
+            BuildFibonacciSequence(fibonacciIndex);
+
+            return FibonacciSequence.Last();
+
+            // fibonacciSequence.Add(fibonacciSequence[0] + fibonacciSequence[1]);
+            //fibonacciSequence.Add(fibonacciSequence[1] + fibonacciSequence[2]);
+            //fibonacciSequence.Add(fibonacciSequence[2] + fibonacciSequence[3]);
+            //fibonacciSequence.Add(fibonacciSequence[3] + fibonacciSequence[4]);
+
+            //fibonacciSequence.ForEach(f => Console.Write(f + " ")); //assigning f to member of of fib seq list
+            //Console.WriteLine();
+            //Console.WriteLine(fibonacciSequence[3]); //this is what we used to access numbers of a list with an index
+            //Console.ReadLine();
+
+
+            //if (fibonacciIndex <= 1)
+            //{
+            //    return fibonacciIndex;
+            //}
+            //else
+            //{
+            //    return Retrieve(fibonacciIndex - 1) + Retrieve(fibonacciIndex - 2);
+            //}
+
+        }
+
+        public List<long> RetrieveFibonacciSequenceAtIndex(int fibonacciIndex)
+        {
+            BuildFibonacciSequence(fibonacciIndex);
+            return FibonacciSequence;
+        }
+
+        private void BuildFibonacciSequence(int fibonacciIndex)
+        {
+            for (int i = 2; i < fibonacciIndex; i++)
             {
-                return Retrieve(fibonacciIndex - 1) + Retrieve(fibonacciIndex - 2);
+                FibonacciSequence.Add(FibonacciSequence[i - 1] + FibonacciSequence[i - 2]);
             }
         }
     }

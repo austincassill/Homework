@@ -10,7 +10,8 @@ namespace Homework
     {
         public static void Main(string[] args)
         {
-
+            Fibonacci   fibonacci= new Fibonacci();
+            fibonacci.RetrieveFibonacciNumberAtIndex(0);
         }
     }
 }

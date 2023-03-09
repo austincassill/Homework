@@ -26,7 +26,7 @@ namespace HomeworkTests
                  //assert 
 
         var result = _byTens.IsDivisibleByTen(0);
-        Assert.IsTrue(result);
+        Assert.IsFalse(result);
 
         }
         [Test]

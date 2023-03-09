@@ -12,7 +12,7 @@ namespace Homework
 
         public bool IsDivisibleByTen(int value)
         {
-            return value == 0 || value % 10 == 0;
+            return value != 0 && value % 10 == 0;
         }
         public int Retrieve(int index)
         {
